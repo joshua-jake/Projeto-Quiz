@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF5F7;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    
+}
+
+h1{
+    color: black;
+    margin: 20px;
+}
+.progress {
+    height: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color:#B83280;
+  
+}
+
+
+
+.scoreArea {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25%;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 25px;
+}
