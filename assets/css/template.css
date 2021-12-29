@@ -1,7 +1,25 @@
+:root {
+    --violet:#ff00ff;
+    --verm:hsl(0, 54%, 79%);
+    --black:rgb(10, 9, 9);
+    --yello:#f7db41;
+    --light:rgb(248, 245, 245);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    @media(max-width: 1080px) {
+        font-size: 93.75%; 
+    }
+    @media(max-width: 720px) {
+        font-size: 87.5%;
+       
+    }
 }
 
 body {
@@ -10,14 +28,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #FFF5F7;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    
+    background-color: var(--verm);
+    font-family: Montserrat, Arial, Helvetica, sans-serif;    
 }
 
-h1{
-    color: black;
-    margin: 20px;
+h1 {
+    color: var(--light);
+    margin-bottom: 40px; 
 }
 .progress {
     height: 5px;
@@ -25,20 +42,93 @@ h1{
     left: 0;
     top: 0;
     right: 0;
-    background-color:#B83280;
+    
   
 }
 
+.progress--bar {
+    background-color:var(--violet);
+    height:100%;
+    transition: all ease .6s;
+} 
 
 
+.questionArea,
 .scoreArea {
-    display: none;
+    display:none;
 }
+
+.questionArea {
+    max-width: 500px;
+    width: 100%;
+    
+}
+
+.question {
+    color: var(--black);
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin: 20px 0; 
+    font-weight: bold;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: var(--violet);
+    border-radius: 10px;
+    margin-bottom: 7px;
+    color:var(--light);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.option span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: var(--yello);
+    color: var(--black);
+}
+.option:hover {
+    background-color: var(--yello);
+    color: var(--black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     text-align: center;
-    margin-top: 25%;
+    margin-top: 30px;
     font-family: Montserrat;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 15px;
+    color: var(--black);
 }
